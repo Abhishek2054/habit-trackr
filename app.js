@@ -7,13 +7,13 @@ const session = require('express-session');
 
 const app = express();
 
-//-----DB Config---------//
-const db = require('./config/keys').MongoURI;
-
 //------Connect to Mongo--------//
-mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log("Connected to MongoDB successfully!"))
-    .catch(err => console.log(err));
+mongoose.connect('mongodb+srv://abhi:temptemp@socialmediaapp.axtx2qv.mongodb.net/habitTracker?retryWrites=true&w=majority')
+const db = mongoose.connection
+
+db.once('open', () => {
+    console.log('connected to the database.');
+})
 
 //-----EJS---------//
 app.use(expressLayouts);
