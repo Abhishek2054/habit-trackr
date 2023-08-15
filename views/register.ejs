@@ -1,0 +1,27 @@
+<!-- Register View -->
+<div class="login_container">
+    <div class="reg_card card text-center">
+      <h1>Habit Tracker
+        <br />
+        <img src="/assets/calendar.svg" alt="Making Habits!" width="20%" />
+      </h1>
+      <h3 class="text-center mb-3">
+        <i class="fas fa-user-plus"></i> Register
+      </h3>
+      <%- include ("./partials/messages") %>
+      <form action="/users/register" method="POST">
+        <div class="form-group">
+          <input type="name" id="name" required name="name" class="form-control" placeholder="Enter Name"
+            value="<%= typeof name != 'undefined' ? name : '' %>" />
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" required class="form-control" placeholder="Enter Email"
+            value="<%= typeof email != 'undefined' ? email : '' %>" />
+        </div>
+        <button type="submit" class="reg_btn">
+          Register
+        </button>
+      </form>
+      <p class="lead mt-3">Returning User? <a href="/users/login">Login</a></p>
+    </div>
+</div>
