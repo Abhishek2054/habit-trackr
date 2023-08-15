@@ -21,11 +21,13 @@
     "express": "^4.18.2",
     "express-ejs-layouts": "^2.5.1",
     "express-session": "^1.17.3",
-    "mongoose": "^5.13.20",
-    "nodejs": "^0.0.0"
+    "mongoose": "^5.13.20"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
+  },
+  "engines": {
+    "node": ">=14.20.1"
   },
   "bugs": {
     "url": "https://github.com/Abhishek2054/habit-trackr/issues"
